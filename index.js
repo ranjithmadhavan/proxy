@@ -3,7 +3,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     app = express();
 
-var myLimit = typeof(process.argv[2]) != 'undefined' ? process.argv[2] : '100kb';
+var myLimit = typeof(process.argv[2]) != 'undefined' ? process.argv[2] : '300kb';
 console.log('Using limit: ', myLimit);
 
 app.use(bodyParser.json({limit: myLimit}));
